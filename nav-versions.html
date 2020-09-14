@@ -1,1 +1,1828 @@
-<section></section>
+<!--
+
+- nav link, on hover, underline effect
+- flip the caret when open
+- hover on nav items: color of item, color of background, etc.
+
+
+-->
+
+
+
+
+<!DOCTYPE html>
+<html class="no-js" lang="{{ locale_name }}">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
+    <style>
+        .navbar-menu {
+            background-color: #373737;
+        }
+        .navbar-item:hover .navbar-link {
+            background-color: #373737 !important;
+        }
+        .navbar-item.is-active .navbar-link {
+            background-color: #373737 !important;
+            color: #9d9d9f !important;
+        }
+        .navbar-link {
+            color: #fff;
+        }
+        .navbar-link:hover {
+            color: #9d9d9f !important;
+            background-color: #373737;
+        }
+        .navbar-link::after {
+            border-color: #fff !important;
+            border-width: 2px !important;
+        }
+        .navbar-link:hover::after {
+            border-color: #9d9d9f !important;
+            /* transform: rotate(135deg) !important; */
+            /* margin-top: -1px !important; */
+        }
+        .navbar-item.is-active .navbar-link::after {
+            border-color: #9d9d9f !important;
+            transform: rotate(135deg) !important;
+            margin-top: -1px !important;
+        }
+        #simpleNavBasic-2 .navbar-item:hover .navbar-link::after, #simpleNavBasic-4 .navbar-item:hover .navbar-link::after {
+            border-color: #9d9d9f !important;
+            transform: rotate(135deg) !important;
+            margin-top: -1px !important;
+        }
+        #simpleNavBasic-2 .navbar-item .navbar-link:hover::after, #simpleNavBasic-4 .navbar-item .navbar-link:hover::after {
+            border-color: #9d9d9f !important;
+            transform: rotate(135deg) !important;
+            margin-top: -1px !important;
+        }
+    </style>
+</head>
+<body>
+<section class="">
+  <div class="columns is-centered">
+    <button class="button is-large is-primary" id="one">1</button>
+    <button class="button is-large" id="two">2</button>
+    <button class="button is-large" id="three">3</button>
+    <button class="button is-large" id="four">4</button>
+  </div>
+</section>
+<section id="four-new-navs">
+    <!-- BEGIN: NAV NUMBER ONE (CLICK A) -->
+    <nav role="navigation" id="abc-simple-nav-1" class="navbar" aria-label="main navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-brand">
+            <!-- TODO: Replace with mobile ABC logo -->
+            <!-- <a class="navbar-item" href="https://bulma.io">
+        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+      </a> -->
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="simpleNavBasic-1">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="simpleNavBasic-1" class="navbar-menu">
+            <div class="navbar-start">
+                <div class="navbar-item has-dropdown">
+                    <a class="navbar-link is-clickable">
+                        Low Rise
+                    </a>
+                    <div id="dropdown-lowrise" class="navbar-dropdown py-2 px-2">
+                        <a class="navbar-item is-size-5" href="https://www.window-cleaning-supply.com/low-rise/">
+                            Low Rise
+                        </a>
+                        <hr class="navbar-divider mx-4 my-0">
+                        <div class="columns">
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/buckets-bottles-water-keys/buckets-lids-accessories/">Buckets</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/buckets-bottles-water-keys/bottles-bottle-holsters/">Bottles</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/brushes-pads-steel-wool/brushes-dusters/">Brushes</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/chemicals/">Chemicals</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/chemicals/awning-care/">Awning Care</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/chemicals/glass-cleaners-wetting-agents/">Glass
+                                    Cleaners</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/chemicals/gutter-cleaning/">Gutter
+                                    Cleaning</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/chemicals/metal-cleaner-polish-restore/">Metal
+                                    Cleaner</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/chemicals/multipurpose-cleaner-degreaser/">MultiPurpose
+                                    Cleaner & Degreaser</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/chemicals/protectants/">Protectants</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/chemicals/screen-cleaner-polish/">Screen
+                                    Cleaner & Polish</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/chemicals/stain-spot-deposit-removers/">Stain,
+                                    Spot, & Deposit Removers</a>
+                            </div>
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/buckets-bottles-water-keys/hip-buckets/">Hip
+                                    Buckets</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/holsters-belts-pouches/">Holsters &amp;
+                                    Belts</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="http://www.window-cleaning-supply.com/kits/">Kits</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="http://www.window-cleaning-supply.com/ladders/">Ladders &amp; Accessories</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/brushes-pads-steel-wool/pads-padholders/">Pads
+                                    & Padholders</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/poles-accessories/">Poles &amp;
+                                    Accessories</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/">Rubber</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/rounded/">Rounded</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/t-shaped/">T
+                                    Shaped</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/rubber-cutters-accessories/">Rubber
+                                    Cutter & Accessories</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/scrapers-blades/">Scrapers & Blades</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/towels-sponges/sponges/">Sponges</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/brushes-pads-steel-wool/steel-wool-brass-wool-wool-sleeves/">Steel
+                                    Wool & Brass Wool</a>
+                            </div>
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/squeegees/">Squeegees</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/squeegees/combination-squeegee-washer/">Combination
+                                    Squeegee Washer</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/shop-by-brand/ettore-rubber/">Ettore</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/squeegees/handles/">Handles</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/shop-by-brand/moerman-duraflex-rubber/">Moerman</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/shop-by-brand/pulex-rubber/">Pulex</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/shop-by-brand/sorbo-rubber/">Sorbo</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/shop-by-brand/steccone-rubber/">Steccone</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/shop-by-brand/triple-crown-rubber/">Triple
+                                    Crown</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/shop-by-brand/unger-rubber/">Unger</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/squeegees/shop-by-type/standard-clip-style/">Standard
+                                    Clip Style</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/squeegees/shop-by-type/standard-clipless/">Standard
+                                    Clipless</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/squeegees/wide-body-channels/">Wide
+                                    Body</a>
+                            </div>
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/towels-sponges/towels/">Towels</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/washers-t-bars-sleeves/">Washers, T
+                                    Bars, &amp; Sleeves</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/washers-t-bars-sleeves/sleeves/">Sleeves</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/washers-t-bars-sleeves/t-bars/">T
+                                    Bars</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/buckets-bottles-water-keys/water-keys/">Water
+                                    Keys</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-item has-dropdown">
+                    <a class="navbar-link is-clickable">
+                        High Rise
+                    </a>
+                    <div id="dropdown-highrise" class="navbar-dropdown py-2 px-2">
+                        <a class="navbar-item is-size-5" href="https://www.window-cleaning-supply.com/high-rise/">
+                            High Rise
+                        </a>
+                        <hr class="navbar-divider mx-4 my-0">
+                        <div class="columns">
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/carabiners/">Carabiners</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/chairs/">Chairs</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/descenders/">Descenders</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/helmets-gloves/">Helmets</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/harnesses/">Harnesses</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/harnesses/shop-by-type/fall-protection/">Fall
+                                    Protection</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/harnesses/shop-by-type/rope-access/">Rope
+                                    Access</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/rope-grabs-and-lanyards/lanyards/">Lanyards</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/miscellaneous/">Miscellaneous</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/miscellaneous/ascenders/">Ascenders</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/miscellaneous/kits/">Kits</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/self-retracting-lifeline/">Self
+                                    Retracting Lifelines</a>
+                            </div>
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/roof-rigs-anchors/">Roof
+                                    Rigs & Anchors</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/rope/">Rope</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-brand/bluewater-rope/">BlueWater</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-brand/new-england-rope/">New
+                                    England</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-brand/petzl-rope/">Petzl</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-brand/pmi-rope/">PMI</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-brand/rockford/">Rockford</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-brand/descent-control-sky-genie/">Sky
+                                    Genie</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-brand/sterling-rope/">Sterling</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-size/7-16/">7/16"
+                                    (11mm)</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-size/1-2/">1/2"
+                                    (12.5-13mm)</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-size/5-8/">5/8" (16mm)</a>
+                            </div>
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/rope-protectors-bags-accessories/">Rope
+                                    Accessories</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope-protectors-bags-accessories/tool-bungees-cord-webbing/">Accessory
+                                    Cord & Webbing</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope-protectors-bags-accessories/bags-for-rope-gear/">Bags</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope-protectors-bags-accessories/edge-rollers/">Edge
+                                    Rollers</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope-protectors-bags-accessories/gloves/">Gloves</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope-protectors-bags-accessories/rope-accessories/">Miscellaneous</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope-protectors-bags-accessories/rope-protectors/">Rope
+                                    Protectors</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope-protectors-bags-accessories/termination-rigging-plates/">Termination
+                                    Plates</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/rope-grabs-and-lanyards/">Rope
+                                    Grabs & Back Ups</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/rope-grabs-and-back-up-devices/7-16-grabs/">7/16"
+                                    Grabs</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/rope-grabs-and-back-up-devices/1-2-grabs/">1/2"
+                                    Grabs</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/rope-grabs-and-back-up-devices/5-8-grabs/">5/8"
+                                    Grabs</a>
+                            </div>
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/safety-cones-buckets-and-tape/">Safety
+                                    Cones & Tape</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/suction-cup-grabbers/">Suction
+                                    Cups</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/tool-bungee-accessory-rope-webbing/">Tool
+                                    Bungees & Drop Prevention</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-item has-dropdown">
+                    <a class="navbar-link is-clickable">
+                        WaterFed<span class="registered-trademark"></span>
+                    </a>
+                    <div id="dropdown-waterfed" class="navbar-dropdown py-2 px-2">
+                        <a class="navbar-item is-size-5" href="https://www.window-cleaning-supply.com/waterfed/">
+                            WaterFed<span class="registered-trademark"></span>
+                        </a>
+                        <hr class="navbar-divider mx-4 my-0">
+                        <div class="columns">
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/accessories/brushes/">Brushes</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/carts-pure-water-systems/ettore-aquaclean/ettore-ez-pure/">Ettore
+                                    Systems</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/carts-pure-water-systems/ipc-eagle/">IPC
+                                    Eagle Systems</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/carts-pure-water-systems/abc-carts/">Triple
+                                    Crown Systems from abc</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-pure-water-system-nxt/">NXT
+                                    Upgradable System</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/abc-photon-waterfed-pure-water-system/">Photon
+                                    DI</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/abc-voyager-4-stage-waterfed-pure-water-system/">Voyager
+                                    Multi-Stage</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/abc-phaser-waterfed-pure-water-system/">Phaser
+                                    Multi-Stage</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-pure-water-system-sg-system/">SG1
+                                    & SG2</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/carts-pure-water-systems/unger-systems/">Unger
+                                    Systems</a>
+                            </div>
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/waterfed-filters/">Filters</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/waterfed-equipment/filters/ez-pure-from-ettore/">EZ
+                                    Pure from Ettore</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/filters/ipc-eagle/">IPC
+                                    Eagle</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/waterfed-equipment/filters/triple-crown/">Triple
+                                    Crown from abc</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/filters/unger-system-filters/">Unger</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/waterfed-filters/">Other
+                                    Brand Filters</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/accessories/fittings-and-parts/">Fittings
+                                    & Parts</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/accessories/goosenecks/">Goosenecks</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/accessories/hose/">Hose
+                                    & Tubing</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/inside-cleaning/">Indoor
+                                    Pure Water</a>
+                            </div>
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/poles-pole-parts/">Poles</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/poles-pole-parts/exel-composites-xtel-ntech/aquaclean-by-ettore/">AquaClean
+                                    from Ettore</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/poles-pole-parts/exel-composites-xtel-ntech/aquaclean-by-ettore/">Exel
+                                    Composites</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/poles-pole-parts/ipc-quick-lock/">IPC</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/waterfed-poles-pole-parts/triple-crown-poles/">Triple
+                                    Crown</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/waterfed-poles-pole-parts/unger-waterfed/">Unger</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/accessories/pumps/">Pumps
+                                    & Motors</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/accessories/reels/">Reels</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/accessories/water-testers/">TDS
+                                    Meters</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-item has-dropdown">
+                    <a class="navbar-link is-clickable">
+                        Miscellaneous
+                    </a>
+                    <div id="dropdown-misc" class="navbar-dropdown py-2 px-2">
+                        <a class="navbar-item is-size-5" href="https://www.window-cleaning-supply.com/miscellaneous/">
+                            Miscellaneous
+                        </a>
+                        <hr class="navbar-divider mx-4 my-0">
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/bird-control-products/">Bird Control</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/miscellaneous/floor-squeegees/">Floor
+                            Squeegees</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/gloves-clothing/">Gloves & Clothing</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/gutter-care-and-cleaning/">Gutters</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/health-safety/">Health &amp; Safety</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/miscellaneous/janitorial-products/">Janitorial</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/miscellaneous/pocket-knife/">Knives</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/screen-cleaning/">Screen Cleaning</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/shoe-covers/">Shoe Covers</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/training-materials/">Training Materials</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/buckets-bottles-water-keys/water-keys/">Water
+                            Keys</a>
+                    </div>
+                </div>
+                <div class="navbar-item has-dropdown">
+                    <a class="navbar-link is-clickable">
+                        Sales
+                    </a>
+                    <hr class="navbar-divider mx-4 my-0">
+                    <div id="dropdown-sales" class="navbar-dropdown py-2 px-2">
+                        <a class="navbar-item is-size-5" href="https://www.window-cleaning-supply.com/sale-items/">
+                            Sales
+                        </a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/clearance-overstock/">Clearance & Overstock</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/sale-items/low-rise-miscellaneous/">Low
+                            Rise</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/high-rise-and-rope-access/">High Rise</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/sale-items/waterfed/">WaterFed</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- {{#if show_search}}
+        <button class="button-search-toggle">
+            {{> svg/search}}
+        </button>
+        {{/if}} -->
+    </nav>
+    <!-- END: NAV NUMBER ONE -->
+    <!-- BEGIN: NAV NUMBER TWO (HOVER A) -->
+    <nav role="navigation" id="abc-simple-nav-2" class="navbar is-hidden" aria-label="main navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-brand">
+            <!-- TODO: Replace with mobile ABC logo -->
+            <!-- <a class="navbar-item" href="https://bulma.io">
+        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+      </a> -->
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="simpleNavBasic-2">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="simpleNavBasic-2" class="navbar-menu">
+            <div class="navbar-start">
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link" href="https://www.window-cleaning-supply.com/low-rise/">
+                        Low Rise
+                    </a>
+                    <div id="dropdown-lowrise" class="navbar-dropdown py-2 px-2">
+                        <a class="navbar-item is-size-5" href="https://www.window-cleaning-supply.com/low-rise/">
+                            Low Rise
+                        </a>
+                        <hr class="navbar-divider mx-4 my-0">
+                        <div class="columns">
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/buckets-bottles-water-keys/buckets-lids-accessories/">Buckets</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/buckets-bottles-water-keys/bottles-bottle-holsters/">Bottles</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/brushes-pads-steel-wool/brushes-dusters/">Brushes</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/chemicals/">Chemicals</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/chemicals/awning-care/">Awning Care</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/chemicals/glass-cleaners-wetting-agents/">Glass
+                                    Cleaners</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/chemicals/gutter-cleaning/">Gutter
+                                    Cleaning</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/chemicals/metal-cleaner-polish-restore/">Metal
+                                    Cleaner</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/chemicals/multipurpose-cleaner-degreaser/">MultiPurpose
+                                    Cleaner & Degreaser</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/chemicals/protectants/">Protectants</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/chemicals/screen-cleaner-polish/">Screen
+                                    Cleaner & Polish</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/chemicals/stain-spot-deposit-removers/">Stain,
+                                    Spot, & Deposit Removers</a>
+                            </div>
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/buckets-bottles-water-keys/hip-buckets/">Hip
+                                    Buckets</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/holsters-belts-pouches/">Holsters &amp;
+                                    Belts</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="http://www.window-cleaning-supply.com/kits/">Kits</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="http://www.window-cleaning-supply.com/ladders/">Ladders &amp; Accessories</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/brushes-pads-steel-wool/pads-padholders/">Pads
+                                    & Padholders</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/poles-accessories/">Poles &amp;
+                                    Accessories</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/">Rubber</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/rounded/">Rounded</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/t-shaped/">T
+                                    Shaped</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/rubber-cutters-accessories/">Rubber
+                                    Cutter & Accessories</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/scrapers-blades/">Scrapers & Blades</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/towels-sponges/sponges/">Sponges</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/brushes-pads-steel-wool/steel-wool-brass-wool-wool-sleeves/">Steel
+                                    Wool & Brass Wool</a>
+                            </div>
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/squeegees/">Squeegees</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/squeegees/combination-squeegee-washer/">Combination
+                                    Squeegee Washer</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/shop-by-brand/ettore-rubber/">Ettore</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/squeegees/handles/">Handles</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/shop-by-brand/moerman-duraflex-rubber/">Moerman</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/shop-by-brand/pulex-rubber/">Pulex</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/shop-by-brand/sorbo-rubber/">Sorbo</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/shop-by-brand/steccone-rubber/">Steccone</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/shop-by-brand/triple-crown-rubber/">Triple
+                                    Crown</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/shop-by-brand/unger-rubber/">Unger</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/squeegees/shop-by-type/standard-clip-style/">Standard
+                                    Clip Style</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/squeegees/shop-by-type/standard-clipless/">Standard
+                                    Clipless</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/squeegees/wide-body-channels/">Wide
+                                    Body</a>
+                            </div>
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/towels-sponges/towels/">Towels</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/washers-t-bars-sleeves/">Washers, T
+                                    Bars, &amp; Sleeves</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/washers-t-bars-sleeves/sleeves/">Sleeves</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/washers-t-bars-sleeves/t-bars/">T
+                                    Bars</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/buckets-bottles-water-keys/water-keys/">Water
+                                    Keys</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link" href="https://www.window-cleaning-supply.com/high-rise/">
+                        High Rise
+                    </a>
+                    <div id="dropdown-highrise" class="navbar-dropdown py-2 px-2">
+                        <a class="navbar-item is-size-5" href="https://www.window-cleaning-supply.com/high-rise/">
+                            High Rise
+                        </a>
+                        <hr class="navbar-divider mx-4 my-0">
+                        <div class="columns">
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/carabiners/">Carabiners</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/chairs/">Chairs</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/descenders/">Descenders</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/helmets-gloves/">Helmets</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/harnesses/">Harnesses</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/harnesses/shop-by-type/fall-protection/">Fall
+                                    Protection</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/harnesses/shop-by-type/rope-access/">Rope
+                                    Access</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/rope-grabs-and-lanyards/lanyards/">Lanyards</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/miscellaneous/">Miscellaneous</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/miscellaneous/ascenders/">Ascenders</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/miscellaneous/kits/">Kits</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/self-retracting-lifeline/">Self
+                                    Retracting Lifelines</a>
+                            </div>
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/roof-rigs-anchors/">Roof
+                                    Rigs & Anchors</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/rope/">Rope</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-brand/bluewater-rope/">BlueWater</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-brand/new-england-rope/">New
+                                    England</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-brand/petzl-rope/">Petzl</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-brand/pmi-rope/">PMI</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-brand/rockford/">Rockford</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-brand/descent-control-sky-genie/">Sky
+                                    Genie</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-brand/sterling-rope/">Sterling</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-size/7-16/">7/16"
+                                    (11mm)</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-size/1-2/">1/2"
+                                    (12.5-13mm)</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-size/5-8/">5/8" (16mm)</a>
+                            </div>
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/rope-protectors-bags-accessories/">Rope
+                                    Accessories</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope-protectors-bags-accessories/tool-bungees-cord-webbing/">Accessory
+                                    Cord & Webbing</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope-protectors-bags-accessories/bags-for-rope-gear/">Bags</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope-protectors-bags-accessories/edge-rollers/">Edge
+                                    Rollers</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope-protectors-bags-accessories/gloves/">Gloves</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope-protectors-bags-accessories/rope-accessories/">Miscellaneous</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope-protectors-bags-accessories/rope-protectors/">Rope
+                                    Protectors</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope-protectors-bags-accessories/termination-rigging-plates/">Termination
+                                    Plates</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/rope-grabs-and-lanyards/">Rope
+                                    Grabs & Back Ups</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/rope-grabs-and-back-up-devices/7-16-grabs/">7/16"
+                                    Grabs</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/rope-grabs-and-back-up-devices/1-2-grabs/">1/2"
+                                    Grabs</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/rope-grabs-and-back-up-devices/5-8-grabs/">5/8"
+                                    Grabs</a>
+                            </div>
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/safety-cones-buckets-and-tape/">Safety
+                                    Cones & Tape</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/suction-cup-grabbers/">Suction
+                                    Cups</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/tool-bungee-accessory-rope-webbing/">Tool
+                                    Bungees & Drop Prevention</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link" href="https://www.window-cleaning-supply.com/waterfed/">
+                        WaterFed<span class="registered-trademark"></span>
+                    </a>
+                    <div id="dropdown-waterfed" class="navbar-dropdown py-2 px-2">
+                        <a class="navbar-item is-size-5" href="https://www.window-cleaning-supply.com/waterfed/">
+                            WaterFed<span class="registered-trademark"></span>
+                        </a>
+                        <hr class="navbar-divider mx-4 my-0">
+                        <div class="columns">
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/accessories/brushes/">Brushes</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/carts-pure-water-systems/ettore-aquaclean/ettore-ez-pure/">Ettore
+                                    Systems</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/carts-pure-water-systems/ipc-eagle/">IPC
+                                    Eagle Systems</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/carts-pure-water-systems/abc-carts/">Triple
+                                    Crown Systems from abc</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-pure-water-system-nxt/">NXT
+                                    Upgradable System</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/abc-photon-waterfed-pure-water-system/">Photon
+                                    DI</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/abc-voyager-4-stage-waterfed-pure-water-system/">Voyager
+                                    Multi-Stage</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/abc-phaser-waterfed-pure-water-system/">Phaser
+                                    Multi-Stage</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-pure-water-system-sg-system/">SG1
+                                    & SG2</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/carts-pure-water-systems/unger-systems/">Unger
+                                    Systems</a>
+                            </div>
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/waterfed-filters/">Filters</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/waterfed-equipment/filters/ez-pure-from-ettore/">EZ
+                                    Pure from Ettore</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/filters/ipc-eagle/">IPC
+                                    Eagle</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/waterfed-equipment/filters/triple-crown/">Triple
+                                    Crown from abc</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/filters/unger-system-filters/">Unger</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/waterfed-filters/">Other
+                                    Brand Filters</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/accessories/fittings-and-parts/">Fittings
+                                    & Parts</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/accessories/goosenecks/">Goosenecks</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/accessories/hose/">Hose
+                                    & Tubing</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/inside-cleaning/">Indoor
+                                    Pure Water</a>
+                            </div>
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/poles-pole-parts/">Poles</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/poles-pole-parts/exel-composites-xtel-ntech/aquaclean-by-ettore/">AquaClean
+                                    from Ettore</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/poles-pole-parts/exel-composites-xtel-ntech/aquaclean-by-ettore/">Exel
+                                    Composites</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/poles-pole-parts/ipc-quick-lock/">IPC</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/waterfed-poles-pole-parts/triple-crown-poles/">Triple
+                                    Crown</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/waterfed-poles-pole-parts/unger-waterfed/">Unger</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/accessories/pumps/">Pumps
+                                    & Motors</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/accessories/reels/">Reels</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/accessories/water-testers/">TDS
+                                    Meters</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link" href="https://www.window-cleaning-supply.com/miscellaneous/">
+                        Miscellaneous
+                    </a>
+                    <div id="dropdown-misc" class="navbar-dropdown py-2 px-2">
+                        <a class="navbar-item is-size-5" href="https://www.window-cleaning-supply.com/miscellaneous/">
+                            Miscellaneous
+                        </a>
+                        <hr class="navbar-divider mx-4 my-0">
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/bird-control-products/">Bird Control</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/miscellaneous/floor-squeegees/">Floor
+                            Squeegees</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/gloves-clothing/">Gloves & Clothing</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/gutter-care-and-cleaning/">Gutters</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/health-safety/">Health &amp; Safety</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/miscellaneous/janitorial-products/">Janitorial</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/miscellaneous/pocket-knife/">Knives</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/screen-cleaning/">Screen Cleaning</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/shoe-covers/">Shoe Covers</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/training-materials/">Training Materials</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/buckets-bottles-water-keys/water-keys/">Water
+                            Keys</a>
+                    </div>
+                </div>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link" href="https://www.window-cleaning-supply.com/sale-items/">
+                        Sales
+                    </a>
+                    <hr class="navbar-divider mx-4 my-0">
+                    <div id="dropdown-sales" class="navbar-dropdown py-2 px-2">
+                        <a class="navbar-item is-size-5" href="https://www.window-cleaning-supply.com/sale-items/">
+                            Sales
+                        </a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/clearance-overstock/">Clearance & Overstock</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/sale-items/low-rise-miscellaneous/">Low
+                            Rise</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/high-rise-and-rope-access/">High Rise</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/sale-items/waterfed/">WaterFed</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- {{#if show_search}}
+        <button class="button-search-toggle">
+            {{> svg/search}}
+        </button>
+        {{/if}} -->
+    </nav>
+    <!-- END: NAV NUMBER TWO -->
+    <!-- BEGIN: NAV NUMBER THREE (CLICK B) -->
+    <nav role="navigation" id="abc-simple-nav-3" class="navbar is-hidden" aria-label="main navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-brand">
+            <!-- TODO: Replace with mobile ABC logo -->
+            <!-- <a class="navbar-item" href="https://bulma.io">
+        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+      </a> -->
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="simpleNavBasic-1">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="simpleNavBasic-3" class="navbar-menu">
+            <div class="navbar-start">
+                <div class="navbar-item has-dropdown">
+                    <a class="navbar-link is-clickable">
+                        Low Rise
+                    </a>
+                    <div id="dropdown-lowrise" class="navbar-dropdown py-2 px-2">
+                        <a class="navbar-item is-size-5" href="https://www.window-cleaning-supply.com/low-rise/">
+                            Low Rise
+                        </a>
+                        <hr class="navbar-divider mx-4 my-0">
+                        <div class="columns">
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/buckets-bottles-water-keys/buckets-lids-accessories/">Buckets</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/buckets-bottles-water-keys/bottles-bottle-holsters/">Bottles</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/brushes-pads-steel-wool/brushes-dusters/">Brushes</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/chemicals/">Chemicals</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/chemicals/awning-care/">Awning Care</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/chemicals/glass-cleaners-wetting-agents/">Glass
+                                    Cleaners</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/chemicals/gutter-cleaning/">Gutter
+                                    Cleaning</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/chemicals/metal-cleaner-polish-restore/">Metal
+                                    Cleaner</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/chemicals/multipurpose-cleaner-degreaser/">MultiPurpose
+                                    Cleaner & Degreaser</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/chemicals/protectants/">Protectants</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/chemicals/screen-cleaner-polish/">Screen
+                                    Cleaner & Polish</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/chemicals/stain-spot-deposit-removers/">Stain,
+                                    Spot, & Deposit Removers</a>
+                            </div>
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/buckets-bottles-water-keys/hip-buckets/">Hip
+                                    Buckets</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/holsters-belts-pouches/">Holsters &amp;
+                                    Belts</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="http://www.window-cleaning-supply.com/kits/">Kits</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="http://www.window-cleaning-supply.com/ladders/">Ladders &amp; Accessories</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/brushes-pads-steel-wool/pads-padholders/">Pads
+                                    & Padholders</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/poles-accessories/">Poles &amp;
+                                    Accessories</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/">Rubber</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/rounded/">Rounded</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/t-shaped/">T
+                                    Shaped</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/rubber-cutters-accessories/">Rubber
+                                    Cutter & Accessories</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/scrapers-blades/">Scrapers & Blades</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/towels-sponges/sponges/">Sponges</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/brushes-pads-steel-wool/steel-wool-brass-wool-wool-sleeves/">Steel
+                                    Wool & Brass Wool</a>
+                            </div>
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/squeegees/">Squeegees</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/squeegees/combination-squeegee-washer/">Combination
+                                    Squeegee Washer</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/shop-by-brand/ettore-rubber/">Ettore</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/squeegees/handles/">Handles</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/shop-by-brand/moerman-duraflex-rubber/">Moerman</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/shop-by-brand/pulex-rubber/">Pulex</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/shop-by-brand/sorbo-rubber/">Sorbo</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/shop-by-brand/steccone-rubber/">Steccone</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/shop-by-brand/triple-crown-rubber/">Triple
+                                    Crown</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/shop-by-brand/unger-rubber/">Unger</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/squeegees/shop-by-type/standard-clip-style/">Standard
+                                    Clip Style</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/squeegees/shop-by-type/standard-clipless/">Standard
+                                    Clipless</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/squeegees/wide-body-channels/">Wide
+                                    Body</a>
+                            </div>
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/towels-sponges/towels/">Towels</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/washers-t-bars-sleeves/">Washers, T
+                                    Bars, &amp; Sleeves</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/washers-t-bars-sleeves/sleeves/">Sleeves</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/washers-t-bars-sleeves/t-bars/">T
+                                    Bars</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/buckets-bottles-water-keys/water-keys/">Water
+                                    Keys</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-item has-dropdown">
+                    <a class="navbar-link is-clickable">
+                        High Rise
+                    </a>
+                    <div id="dropdown-highrise" class="navbar-dropdown py-2 px-2">
+                        <a class="navbar-item is-size-5" href="https://www.window-cleaning-supply.com/high-rise/">
+                            High Rise
+                        </a>
+                        <hr class="navbar-divider mx-4 my-0">
+                        <div class="columns">
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/carabiners/">Carabiners</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/chairs/">Chairs</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/descenders/">Descenders</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/helmets-gloves/">Helmets</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/harnesses/">Harnesses</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/harnesses/shop-by-type/fall-protection/">Fall
+                                    Protection</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/harnesses/shop-by-type/rope-access/">Rope
+                                    Access</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/rope-grabs-and-lanyards/lanyards/">Lanyards</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/miscellaneous/">Miscellaneous</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/miscellaneous/ascenders/">Ascenders</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/miscellaneous/kits/">Kits</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/self-retracting-lifeline/">Self
+                                    Retracting Lifelines</a>
+                            </div>
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/roof-rigs-anchors/">Roof
+                                    Rigs & Anchors</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/rope/">Rope</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-brand/bluewater-rope/">BlueWater</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-brand/new-england-rope/">New
+                                    England</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-brand/petzl-rope/">Petzl</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-brand/pmi-rope/">PMI</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-brand/rockford/">Rockford</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-brand/descent-control-sky-genie/">Sky
+                                    Genie</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-brand/sterling-rope/">Sterling</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-size/7-16/">7/16"
+                                    (11mm)</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-size/1-2/">1/2"
+                                    (12.5-13mm)</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-size/5-8/">5/8" (16mm)</a>
+                            </div>
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/rope-protectors-bags-accessories/">Rope
+                                    Accessories</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope-protectors-bags-accessories/tool-bungees-cord-webbing/">Accessory
+                                    Cord & Webbing</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope-protectors-bags-accessories/bags-for-rope-gear/">Bags</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope-protectors-bags-accessories/edge-rollers/">Edge
+                                    Rollers</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope-protectors-bags-accessories/gloves/">Gloves</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope-protectors-bags-accessories/rope-accessories/">Miscellaneous</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope-protectors-bags-accessories/rope-protectors/">Rope
+                                    Protectors</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope-protectors-bags-accessories/termination-rigging-plates/">Termination
+                                    Plates</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/rope-grabs-and-lanyards/">Rope
+                                    Grabs & Back Ups</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/rope-grabs-and-back-up-devices/7-16-grabs/">7/16"
+                                    Grabs</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/rope-grabs-and-back-up-devices/1-2-grabs/">1/2"
+                                    Grabs</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/rope-grabs-and-back-up-devices/5-8-grabs/">5/8"
+                                    Grabs</a>
+                            </div>
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/safety-cones-buckets-and-tape/">Safety
+                                    Cones & Tape</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/suction-cup-grabbers/">Suction
+                                    Cups</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/tool-bungee-accessory-rope-webbing/">Tool
+                                    Bungees & Drop Prevention</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-item has-dropdown">
+                    <a class="navbar-link is-clickable">
+                        WaterFed<span class="registered-trademark"></span>
+                    </a>
+                    <div id="dropdown-waterfed" class="navbar-dropdown py-2 px-2">
+                        <a class="navbar-item is-size-5" href="https://www.window-cleaning-supply.com/waterfed/">
+                            WaterFed<span class="registered-trademark"></span>
+                        </a>
+                        <hr class="navbar-divider mx-4 my-0">
+                        <div class="columns">
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/accessories/brushes/">Brushes</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/carts-pure-water-systems/ettore-aquaclean/ettore-ez-pure/">Ettore
+                                    Systems</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/carts-pure-water-systems/ipc-eagle/">IPC
+                                    Eagle Systems</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/carts-pure-water-systems/abc-carts/">Triple
+                                    Crown Systems from abc</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-pure-water-system-nxt/">NXT
+                                    Upgradable System</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/abc-photon-waterfed-pure-water-system/">Photon
+                                    DI</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/abc-voyager-4-stage-waterfed-pure-water-system/">Voyager
+                                    Multi-Stage</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/abc-phaser-waterfed-pure-water-system/">Phaser
+                                    Multi-Stage</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-pure-water-system-sg-system/">SG1
+                                    & SG2</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/carts-pure-water-systems/unger-systems/">Unger
+                                    Systems</a>
+                            </div>
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/waterfed-filters/">Filters</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/waterfed-equipment/filters/ez-pure-from-ettore/">EZ
+                                    Pure from Ettore</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/filters/ipc-eagle/">IPC
+                                    Eagle</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/waterfed-equipment/filters/triple-crown/">Triple
+                                    Crown from abc</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/filters/unger-system-filters/">Unger</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/waterfed-filters/">Other
+                                    Brand Filters</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/accessories/fittings-and-parts/">Fittings
+                                    & Parts</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/accessories/goosenecks/">Goosenecks</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/accessories/hose/">Hose
+                                    & Tubing</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/inside-cleaning/">Indoor
+                                    Pure Water</a>
+                            </div>
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/poles-pole-parts/">Poles</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/poles-pole-parts/exel-composites-xtel-ntech/aquaclean-by-ettore/">AquaClean
+                                    from Ettore</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/poles-pole-parts/exel-composites-xtel-ntech/aquaclean-by-ettore/">Exel
+                                    Composites</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/poles-pole-parts/ipc-quick-lock/">IPC</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/waterfed-poles-pole-parts/triple-crown-poles/">Triple
+                                    Crown</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/waterfed-poles-pole-parts/unger-waterfed/">Unger</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/accessories/pumps/">Pumps
+                                    & Motors</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/accessories/reels/">Reels</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/accessories/water-testers/">TDS
+                                    Meters</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-item has-dropdown">
+                    <a class="navbar-link is-clickable">
+                        Miscellaneous
+                    </a>
+                    <div id="dropdown-misc" class="navbar-dropdown py-2 px-2">
+                        <a class="navbar-item is-size-5" href="https://www.window-cleaning-supply.com/miscellaneous/">
+                            Miscellaneous
+                        </a>
+                        <hr class="navbar-divider mx-4 my-0">
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/bird-control-products/">Bird Control</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/miscellaneous/floor-squeegees/">Floor
+                            Squeegees</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/gloves-clothing/">Gloves & Clothing</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/gutter-care-and-cleaning/">Gutters</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/health-safety/">Health &amp; Safety</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/miscellaneous/janitorial-products/">Janitorial</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/miscellaneous/pocket-knife/">Knives</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/screen-cleaning/">Screen Cleaning</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/shoe-covers/">Shoe Covers</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/training-materials/">Training Materials</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/buckets-bottles-water-keys/water-keys/">Water
+                            Keys</a>
+                    </div>
+                </div>
+                <div class="navbar-item has-dropdown">
+                    <a class="navbar-link is-clickable">
+                        Sales
+                    </a>
+                    <hr class="navbar-divider mx-4 my-0">
+                    <div id="dropdown-sales" class="navbar-dropdown py-2 px-2">
+                        <a class="navbar-item is-size-5" href="https://www.window-cleaning-supply.com/sale-items/">
+                            Sales
+                        </a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/clearance-overstock/">Clearance & Overstock</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/sale-items/low-rise-miscellaneous/">Low
+                            Rise</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/high-rise-and-rope-access/">High Rise</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/sale-items/waterfed/">WaterFed</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- {{#if show_search}}
+        <button class="button-search-toggle">
+            {{> svg/search}}
+        </button>
+        {{/if}} -->
+    </nav>
+    <!-- END: NAV NUMBER THREE -->
+    <!-- BEGIN: NAV NUMBER FOUR (HOVER B) -->
+    <nav role="navigation" id="abc-simple-nav-4" class="navbar is-hidden" aria-label="main navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-brand">
+            <!-- TODO: Replace with mobile ABC logo -->
+            <!-- <a class="navbar-item" href="https://bulma.io">
+        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+      </a> -->
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="simpleNavBasic-2">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="simpleNavBasic-4" class="navbar-menu">
+            <div class="navbar-start">
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link" href="https://www.window-cleaning-supply.com/low-rise/">
+                        Low Rise
+                    </a>
+                    <div id="dropdown-lowrise" class="navbar-dropdown py-2 px-2">
+                        <a class="navbar-item is-size-5" href="https://www.window-cleaning-supply.com/low-rise/">
+                            Low Rise
+                        </a>
+                        <hr class="navbar-divider mx-4 my-0">
+                        <div class="columns">
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/buckets-bottles-water-keys/buckets-lids-accessories/">Buckets</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/buckets-bottles-water-keys/bottles-bottle-holsters/">Bottles</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/brushes-pads-steel-wool/brushes-dusters/">Brushes</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/chemicals/">Chemicals</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/chemicals/awning-care/">Awning Care</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/chemicals/glass-cleaners-wetting-agents/">Glass
+                                    Cleaners</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/chemicals/gutter-cleaning/">Gutter
+                                    Cleaning</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/chemicals/metal-cleaner-polish-restore/">Metal
+                                    Cleaner</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/chemicals/multipurpose-cleaner-degreaser/">MultiPurpose
+                                    Cleaner & Degreaser</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/chemicals/protectants/">Protectants</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/chemicals/screen-cleaner-polish/">Screen
+                                    Cleaner & Polish</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/chemicals/stain-spot-deposit-removers/">Stain,
+                                    Spot, & Deposit Removers</a>
+                            </div>
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/buckets-bottles-water-keys/hip-buckets/">Hip
+                                    Buckets</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/holsters-belts-pouches/">Holsters &amp;
+                                    Belts</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="http://www.window-cleaning-supply.com/kits/">Kits</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="http://www.window-cleaning-supply.com/ladders/">Ladders &amp; Accessories</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/brushes-pads-steel-wool/pads-padholders/">Pads
+                                    & Padholders</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/poles-accessories/">Poles &amp;
+                                    Accessories</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/">Rubber</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/rounded/">Rounded</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/t-shaped/">T
+                                    Shaped</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/rubber-cutters-accessories/">Rubber
+                                    Cutter & Accessories</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/scrapers-blades/">Scrapers & Blades</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/towels-sponges/sponges/">Sponges</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/brushes-pads-steel-wool/steel-wool-brass-wool-wool-sleeves/">Steel
+                                    Wool & Brass Wool</a>
+                            </div>
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/squeegees/">Squeegees</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/squeegees/combination-squeegee-washer/">Combination
+                                    Squeegee Washer</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/shop-by-brand/ettore-rubber/">Ettore</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/squeegees/handles/">Handles</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/shop-by-brand/moerman-duraflex-rubber/">Moerman</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/shop-by-brand/pulex-rubber/">Pulex</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/shop-by-brand/sorbo-rubber/">Sorbo</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/shop-by-brand/steccone-rubber/">Steccone</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/shop-by-brand/triple-crown-rubber/">Triple
+                                    Crown</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rubber-replacement/shop-by-brand/unger-rubber/">Unger</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/squeegees/shop-by-type/standard-clip-style/">Standard
+                                    Clip Style</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/squeegees/shop-by-type/standard-clipless/">Standard
+                                    Clipless</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/squeegees/wide-body-channels/">Wide
+                                    Body</a>
+                            </div>
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/towels-sponges/towels/">Towels</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/washers-t-bars-sleeves/">Washers, T
+                                    Bars, &amp; Sleeves</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/washers-t-bars-sleeves/sleeves/">Sleeves</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/washers-t-bars-sleeves/t-bars/">T
+                                    Bars</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/buckets-bottles-water-keys/water-keys/">Water
+                                    Keys</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link" href="https://www.window-cleaning-supply.com/high-rise/">
+                        High Rise
+                    </a>
+                    <div id="dropdown-highrise" class="navbar-dropdown py-2 px-2">
+                        <a class="navbar-item is-size-5" href="https://www.window-cleaning-supply.com/high-rise/">
+                            High Rise
+                        </a>
+                        <hr class="navbar-divider mx-4 my-0">
+                        <div class="columns">
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/carabiners/">Carabiners</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/chairs/">Chairs</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/descenders/">Descenders</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/helmets-gloves/">Helmets</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/harnesses/">Harnesses</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/harnesses/shop-by-type/fall-protection/">Fall
+                                    Protection</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/harnesses/shop-by-type/rope-access/">Rope
+                                    Access</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/rope-grabs-and-lanyards/lanyards/">Lanyards</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/miscellaneous/">Miscellaneous</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/miscellaneous/ascenders/">Ascenders</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/miscellaneous/kits/">Kits</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/self-retracting-lifeline/">Self
+                                    Retracting Lifelines</a>
+                            </div>
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/roof-rigs-anchors/">Roof
+                                    Rigs & Anchors</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/rope/">Rope</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-brand/bluewater-rope/">BlueWater</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-brand/new-england-rope/">New
+                                    England</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-brand/petzl-rope/">Petzl</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-brand/pmi-rope/">PMI</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-brand/rockford/">Rockford</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-brand/descent-control-sky-genie/">Sky
+                                    Genie</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-brand/sterling-rope/">Sterling</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-size/7-16/">7/16"
+                                    (11mm)</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-size/1-2/">1/2"
+                                    (12.5-13mm)</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope/shop-by-size/5-8/">5/8" (16mm)</a>
+                            </div>
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/rope-protectors-bags-accessories/">Rope
+                                    Accessories</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope-protectors-bags-accessories/tool-bungees-cord-webbing/">Accessory
+                                    Cord & Webbing</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope-protectors-bags-accessories/bags-for-rope-gear/">Bags</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope-protectors-bags-accessories/edge-rollers/">Edge
+                                    Rollers</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope-protectors-bags-accessories/gloves/">Gloves</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope-protectors-bags-accessories/rope-accessories/">Miscellaneous</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope-protectors-bags-accessories/rope-protectors/">Rope
+                                    Protectors</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/rope-protectors-bags-accessories/termination-rigging-plates/">Termination
+                                    Plates</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/rope-grabs-and-lanyards/">Rope
+                                    Grabs & Back Ups</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/rope-grabs-and-back-up-devices/7-16-grabs/">7/16"
+                                    Grabs</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/rope-grabs-and-back-up-devices/1-2-grabs/">1/2"
+                                    Grabs</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/rope-grabs-and-back-up-devices/5-8-grabs/">5/8"
+                                    Grabs</a>
+                            </div>
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/safety-cones-buckets-and-tape/">Safety
+                                    Cones & Tape</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/suction-cup-grabbers/">Suction
+                                    Cups</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/high-rise-equipment/tool-bungee-accessory-rope-webbing/">Tool
+                                    Bungees & Drop Prevention</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link" href="https://www.window-cleaning-supply.com/waterfed/">
+                        WaterFed<span class="registered-trademark"></span>
+                    </a>
+                    <div id="dropdown-waterfed" class="navbar-dropdown py-2 px-2">
+                        <a class="navbar-item is-size-5" href="https://www.window-cleaning-supply.com/waterfed/">
+                            WaterFed<span class="registered-trademark"></span>
+                        </a>
+                        <hr class="navbar-divider mx-4 my-0">
+                        <div class="columns">
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/accessories/brushes/">Brushes</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/carts-pure-water-systems/ettore-aquaclean/ettore-ez-pure/">Ettore
+                                    Systems</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/carts-pure-water-systems/ipc-eagle/">IPC
+                                    Eagle Systems</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/carts-pure-water-systems/abc-carts/">Triple
+                                    Crown Systems from abc</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-pure-water-system-nxt/">NXT
+                                    Upgradable System</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/abc-photon-waterfed-pure-water-system/">Photon
+                                    DI</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/abc-voyager-4-stage-waterfed-pure-water-system/">Voyager
+                                    Multi-Stage</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/abc-phaser-waterfed-pure-water-system/">Phaser
+                                    Multi-Stage</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-pure-water-system-sg-system/">SG1
+                                    & SG2</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/carts-pure-water-systems/unger-systems/">Unger
+                                    Systems</a>
+                            </div>
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/waterfed-filters/">Filters</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/waterfed-equipment/filters/ez-pure-from-ettore/">EZ
+                                    Pure from Ettore</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/filters/ipc-eagle/">IPC
+                                    Eagle</a>
+                                <a class="navbar-item ml-4"
+                                    href="http://www.window-cleaning-supply.com/waterfed-equipment/filters/triple-crown/">Triple
+                                    Crown from abc</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/filters/unger-system-filters/">Unger</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/waterfed-filters/">Other
+                                    Brand Filters</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/accessories/fittings-and-parts/">Fittings
+                                    & Parts</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/accessories/goosenecks/">Goosenecks</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/accessories/hose/">Hose
+                                    & Tubing</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/inside-cleaning/">Indoor
+                                    Pure Water</a>
+                            </div>
+                            <div class="column">
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/poles-pole-parts/">Poles</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/poles-pole-parts/exel-composites-xtel-ntech/aquaclean-by-ettore/">AquaClean
+                                    from Ettore</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/poles-pole-parts/exel-composites-xtel-ntech/aquaclean-by-ettore/">Exel
+                                    Composites</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/poles-pole-parts/ipc-quick-lock/">IPC</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/waterfed-poles-pole-parts/triple-crown-poles/">Triple
+                                    Crown</a>
+                                <a class="navbar-item ml-4"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/waterfed-poles-pole-parts/unger-waterfed/">Unger</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/accessories/pumps/">Pumps
+                                    & Motors</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/accessories/reels/">Reels</a>
+                                <a class="navbar-item has-text-weight-semibold"
+                                    href="https://www.window-cleaning-supply.com/waterfed-equipment/accessories/water-testers/">TDS
+                                    Meters</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link" href="https://www.window-cleaning-supply.com/miscellaneous/">
+                        Miscellaneous
+                    </a>
+                    <div id="dropdown-misc" class="navbar-dropdown py-2 px-2">
+                        <a class="navbar-item is-size-5" href="https://www.window-cleaning-supply.com/miscellaneous/">
+                            Miscellaneous
+                        </a>
+                        <hr class="navbar-divider mx-4 my-0">
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/bird-control-products/">Bird Control</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/miscellaneous/floor-squeegees/">Floor
+                            Squeegees</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/gloves-clothing/">Gloves & Clothing</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/gutter-care-and-cleaning/">Gutters</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/health-safety/">Health &amp; Safety</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/miscellaneous/janitorial-products/">Janitorial</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/miscellaneous/pocket-knife/">Knives</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/screen-cleaning/">Screen Cleaning</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/shoe-covers/">Shoe Covers</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/training-materials/">Training Materials</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/buckets-bottles-water-keys/water-keys/">Water
+                            Keys</a>
+                    </div>
+                </div>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link" href="https://www.window-cleaning-supply.com/sale-items/">
+                        Sales
+                    </a>
+                    <hr class="navbar-divider mx-4 my-0">
+                    <div id="dropdown-sales" class="navbar-dropdown py-2 px-2">
+                        <a class="navbar-item is-size-5" href="https://www.window-cleaning-supply.com/sale-items/">
+                            Sales
+                        </a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/clearance-overstock/">Clearance & Overstock</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/sale-items/low-rise-miscellaneous/">Low
+                            Rise</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/high-rise-and-rope-access/">High Rise</a>
+                        <a class="navbar-item has-text-weight-semibold"
+                            href="https://www.window-cleaning-supply.com/sale-items/waterfed/">WaterFed</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- {{#if show_search}}
+        <button class="button-search-toggle">
+            {{> svg/search}}
+        </button>
+        {{/if}} -->
+    </nav>
+    <!-- END: NAV NUMBER FOUR -->
+
+</section>
+<script
+  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+  crossorigin="anonymous">
+</script>
+<script>
+    $(document).ready(function() {
+
+// Check for click events on the navbar burger icon
+$(".is-clickable").click(function() {
+    console.log('is-clickable',$(this).parent());
+    // Handle if user clicks dropdown menu twice(ie - close if already open)
+    if ($(this).parent().hasClass("is-active")) {
+        $(this).parent().toggleClass("is-active");
+    } else {
+        $('.is-active').toggleClass("is-active");
+        $(this).parent().toggleClass("is-active");
+    }
+    });
+
+// Toggle which menu is appearing
+$('#one').click(()=>{
+    $('#abc-simple-nav-1').toggleClass('is-hidden');
+    $('#one').toggleClass('is-primary');
+});
+$('#two').click(()=>{    
+    $('#abc-simple-nav-2').toggleClass('is-hidden');
+    $('#two').toggleClass('is-primary');
+});
+$('#three').click(()=>{    
+    $('#abc-simple-nav-3').toggleClass('is-hidden');
+    $('#three').toggleClass('is-primary');
+});
+$('#four').click(()=>{    
+    $('#abc-simple-nav-4').toggleClass('is-hidden');
+    $('#four').toggleClass('is-primary');
+});
+
+});
+</script>
+</body>
+</html>
