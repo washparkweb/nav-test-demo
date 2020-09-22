@@ -106,15 +106,6 @@
             max-height: 366px;
         }
 
-        /* .navbar-item.has-dropdown.this-is-hoverable .navbar-dropdown { */
-            /* -webkit-transition: opacity 2s ease-in-out;
-            -moz-transition: opacity 2s ease-in-out;
-            transition: opacity 2s ease-in-out; */
-            /* -webkit-transition-delay: 2.6s; 
-            -moz-transition-delay: 2.6s; 
-            transition-delay: 2.6s; */
-            /* animation: no-opacity 10s; */
-        /* } */
         .navbar-item.has-dropdown.this-is-hoverable.is-active .navbar-dropdown {
             animation: yes-opacity 500ms;
         }
@@ -122,10 +113,10 @@
         from { opacity: 0; }
         to   { opacity: 1; }
         }
-        /* @keyframes no-opacity {
+        @keyframes no-opacity {
         from { opacity: 1; }
         to   { opacity: 0; }
-        } */
+        }
 
         #simpleNavBasic-3 .navbar-item.is-active .navbar-link,
         #simpleNavBasic-4 .navbar-item.is-active .navbar-link {
@@ -265,7 +256,7 @@
 
             <div id="simpleNavBasic-1" class="navbar-menu">
                 <div class="navbar-start ml-6">
-                    <div class="navbar-item has-dropdown">
+                    <div class="navbar-item has-dropdown  click-dropdown">
                         <a class="navbar-link is-clickable">
                             Low Rise
                         </a>
@@ -397,7 +388,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="navbar-item has-dropdown">
+                    <div class="navbar-item has-dropdown  click-dropdown">
                         <a class="navbar-link is-clickable">
                             High Rise
                         </a>
@@ -517,7 +508,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="navbar-item has-dropdown">
+                    <div class="navbar-item has-dropdown  click-dropdown">
                         <a class="navbar-link is-clickable">
                             WaterFed®
                             <!-- <span class="registered-trademark">®</span> -->
@@ -617,7 +608,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="navbar-item has-dropdown">
+                    <div class="navbar-item has-dropdown click-dropdown">
                         <a class="navbar-link is-clickable">
                             Miscellaneous
                         </a>
@@ -653,7 +644,7 @@
                                 Keys</a>
                         </div>
                     </div>
-                    <div class="navbar-item has-dropdown">
+                    <div class="navbar-item has-dropdown click-dropdown">
                         <a class="navbar-link is-clickable">
                             Sales
                         </a>
@@ -703,7 +694,7 @@
             <div id="simpleNavBasic-2" class="navbar-menu">
                 <div class="navbar-start ml-6">
                     <div class="navbar-item has-dropdown this-is-hoverable">
-                        <a class="navbar-link" href="https://www.window-cleaning-supply.com/low-rise/">
+                        <a class="navbar-link">
                             Low Rise
                         </a>
                         <div id="dropdown-lowrise" class="navbar-dropdown py-2 px-2">
@@ -835,7 +826,7 @@
                         </div>
                     </div>
                     <div class="navbar-item has-dropdown this-is-hoverable">
-                        <a class="navbar-link" href="https://www.window-cleaning-supply.com/high-rise/">
+                        <a class="navbar-link">
                             High Rise
                         </a>
                         <div id="dropdown-highrise" class="navbar-dropdown py-2 px-2">
@@ -955,7 +946,7 @@
                         </div>
                     </div>
                     <div class="navbar-item has-dropdown this-is-hoverable">
-                        <a class="navbar-link" href="https://www.window-cleaning-supply.com/waterfed/">
+                        <a class="navbar-link">
                             WaterFed®
                             <!-- <span class="registered-trademark">®</span> -->
                         </a>
@@ -1055,7 +1046,7 @@
                         </div>
                     </div>
                     <div class="navbar-item has-dropdown this-is-hoverable">
-                        <a class="navbar-link" href="https://www.window-cleaning-supply.com/miscellaneous/">
+                        <a class="navbar-link">
                             Miscellaneous
                         </a>
                         <div id="dropdown-misc" class="navbar-dropdown py-2 px-2">
@@ -1091,7 +1082,7 @@
                         </div>
                     </div>
                     <div class="navbar-item has-dropdown this-is-hoverable">
-                        <a class="navbar-link" href="https://www.window-cleaning-supply.com/sale-items/">
+                        <a class="navbar-link">
                             Sales
                         </a>
                         <div id="dropdown-sales" class="navbar-dropdown py-2 px-2">
@@ -1139,7 +1130,7 @@
 
             <div id="simpleNavBasic-3" class="navbar-menu">
                 <div class="navbar-start ml-6">
-                    <div class="navbar-item has-dropdown">
+                    <div class="navbar-item has-dropdown click-dropdown">
                         <a class="navbar-link is-arrowless is-clickable">
                             <span class="hvr-underline-from-left">Low Rise</span>
                         </a>
@@ -1274,7 +1265,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="navbar-item has-dropdown">
+                    <div class="navbar-item has-dropdown  click-dropdown">
                         <a class="navbar-link is-arrowless is-clickable">
                             <span class="hvr-underline-from-left">High Rise</span>
                         </a>
@@ -1397,7 +1388,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="navbar-item has-dropdown">
+                    <div class="navbar-item has-dropdown  click-dropdown">
                         <a class="navbar-link is-arrowless is-clickable">
                             <span class="hvr-underline-from-left">WaterFed®
                                 <!-- <span class="registered-trademark">®</span> -->
@@ -1501,7 +1492,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="navbar-item has-dropdown">
+                    <div class="navbar-item has-dropdown  click-dropdown">
                         <a class="navbar-link is-arrowless is-clickable">
                             <span class="hvr-underline-from-left">Miscellaneous</span>
                         </a>
@@ -1544,7 +1535,7 @@
                                 </div>
                         </div>
                     </div>
-                    <div class="navbar-item has-dropdown">
+                    <div class="navbar-item has-dropdown  click-dropdown">
                         <a class="navbar-link is-arrowless is-clickable">
                             <span class="hvr-underline-from-left">Sales</span>
                         </a>
@@ -1601,7 +1592,7 @@
             <div id="simpleNavBasic-4" class="navbar-menu">
                 <div class="navbar-start ml-6">
                     <div class="navbar-item has-dropdown this-is-hoverable">
-                        <a class="navbar-link is-arrowless" href="https://www.window-cleaning-supply.com/low-rise/">
+                        <a class="navbar-link is-arrowless">
                             <span class="hvr-underline-from-left">Low Rise</span>
                         </a>
                         <div id="dropdown-lowrise" class="navbar-dropdown py-2 px-2">
@@ -1736,7 +1727,7 @@
                         </div>
                     </div>
                     <div class="navbar-item has-dropdown this-is-hoverable">
-                        <a class="navbar-link is-arrowless" href="https://www.window-cleaning-supply.com/high-rise/">
+                        <a class="navbar-link is-arrowless">
                             <span class="hvr-underline-from-left">High Rise</span>
                         </a>
                         <div id="dropdown-highrise" class="navbar-dropdown py-2 px-2">
@@ -1859,7 +1850,7 @@
                         </div>
                     </div>
                     <div class="navbar-item has-dropdown this-is-hoverable">
-                        <a class="navbar-link is-arrowless" href="https://www.window-cleaning-supply.com/waterfed/">
+                        <a class="navbar-link is-arrowless">
                             <span class="hvr-underline-from-left">WaterFed®
                                 <!-- <span class="registered-trademark">®</span> -->
                             </span>
@@ -1963,7 +1954,7 @@
                         </div>
                     </div>
                     <div class="navbar-item has-dropdown this-is-hoverable">
-                        <a class="navbar-link is-arrowless" href="https://www.window-cleaning-supply.com/miscellaneous/">
+                        <a class="navbar-link is-arrowless">
                             <span class="hvr-underline-from-left">Miscellaneous</span>
                         </a>
                         <div id="dropdown-misc" class="navbar-dropdown py-2 px-2">
@@ -2006,7 +1997,7 @@
                         </div>
                     </div>
                     <div class="navbar-item has-dropdown this-is-hoverable">
-                        <a class="navbar-link is-arrowless" href="https://www.window-cleaning-supply.com/sale-items/">
+                        <a class="navbar-link is-arrowless">
                             <span class="hvr-underline-from-left">Sales</span>
                         </a>
                         <div id="dropdown-sales" class="navbar-dropdown py-2 px-2">
@@ -2050,7 +2041,7 @@
     <script>
         $(document).ready(function () {
 
-            // Check for click events on the navbar burger icon
+            // Check for click events on the navbar
             $(".is-clickable").click(function () {
                 console.log('is-clickable', $(this).parent());
                 // Handle if user clicks dropdown menu twice(ie - close if already open)
@@ -2104,18 +2095,50 @@
                 $('#three').removeClass('is-primary');
             });
 
-            $('.this-is-hoverable').hover((e) => {
-                // let parent = $(this).parent();
-                console.log('entering...', e.target.parentElement);
-                const parent = e.target.parentElement;
-                $('.navbar-item.has-dropdown.this-is-hoverable.is-active').removeClass('is-active');
-                $(parent).addClass('is-active');
-            }, (e) => {
-                // console.log('leaving...', e.target.parentElement);
-                // const parent = e.target.parentElement;
-                // $(parent).addClass('is-active');
-                // $(parent).removeClass('is-active');
+
+            let currentTarget;
+            let fadeOut;
+            $('.this-is-hoverable').mouseleave((e) => {
+                fadeOut = setTimeout(()=>{
+                    // console.log('currentTarget', currentTarget);
+                    $(currentTarget).removeClass('is-active');
+                },1200);
             });
+
+            $('.this-is-hoverable').mouseenter((e) => {
+                clearTimeout(fadeOut);
+                // console.log('HERE', e);
+                currentTarget = e.currentTarget;
+                const currentIsActive = $(e.currentTarget).hasClass('is-active');
+                if (currentIsActive) {
+                    // console.log('parentIsACTIVE', currentIsActive);
+                } else {
+                    // console.log('currentIsNOTactive...', currentIsActive);
+                    $('.navbar-item.has-dropdown.this-is-hoverable.is-active').removeClass('is-active');
+                    $(e.currentTarget).addClass('is-active');
+                }
+            });
+
+            // $('.click-dropdown').mouseleave((e) => {
+            //     fadeOut = setTimeout(()=>{
+            //         // console.log('currentTarget', currentTarget);
+            //         $(currentTarget).removeClass('is-active');
+            //     },1200);
+            // });
+
+            // $('.click-dropdown').mouseenter((e) => {
+            //     clearTimeout(fadeOut);
+            //     // console.log('HERE', e);
+            //     currentTarget = e.currentTarget;
+            //     const currentIsActive = $(e.currentTarget).hasClass('is-active');
+            //     if (currentIsActive) {
+            //         console.log('parentIsACTIVE', currentIsActive);
+            //     } else {
+            //         console.log('currentIsNOTactive...', currentIsActive);
+            //         $('.navbar-item.has-dropdown.this-is-hoverable.is-active').removeClass('is-active');
+            //         $(e.currentTarget).addClass('is-active');
+            //     }
+            // });
 
         });
     </script>
